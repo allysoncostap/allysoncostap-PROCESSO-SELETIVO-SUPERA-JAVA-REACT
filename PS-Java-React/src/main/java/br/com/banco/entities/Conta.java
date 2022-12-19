@@ -19,12 +19,13 @@ public class Conta implements Serializable {
     @Column(name = "nome_responsavel", nullable = false)
     private String nome;
     @ManyToOne
+    @JoinColumn(name = "transferencia_id")
     private Transferencia transferencia;
 
     public Conta() {
     }
 
-  
+
 
     public Conta(Long id, String nome) {
         this.id = id;
